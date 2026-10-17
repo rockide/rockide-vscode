@@ -26,7 +26,7 @@
 		"check-types": "tsc --noEmit",
 		"fmt": "dprint fmt",
 		"lint": "eslint src",
-		"clone-schemas": "degit github:rockide/editor-packages/packages/minecraftBedrock/schema#rockide schemas"
+		"clone-schemas": "node scripts/update-schemas.js"
 	},
 	"dependencies": {
 		"modern-tar": "^0.6.1",
@@ -40,7 +40,6 @@
 		"@types/semver": "^7.7.1",
 		"@types/vscode": "^1.99.0",
 		"@types/which": "^3.0.4",
-		"degit": "^2.8.6",
 		"dprint": "^0.50.2",
 		"esbuild": "^0.28.1",
 		"eslint": "^9.39.4",
@@ -392,7 +391,7 @@
 					"*bp/aim_assist/categories/**/*.{json,jsonc,json5}",
 					"bp_*/aim_assist/categories/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/aimAssistCategories/main.json"
+				"url": "./schemas/dist/280z5zsn3dvom.json"
 			},
 			{
 				"fileMatch": [
@@ -402,7 +401,7 @@
 					"*bp/aim_assist/presets/**/*.{json,jsonc,json5}",
 					"bp_*/aim_assist/presets/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/aimAssistPreset/main.json"
+				"url": "./schemas/dist/hckthqu0xg61.json"
 			},
 			{
 				"fileMatch": [
@@ -412,7 +411,7 @@
 					"*bp/animation_controllers/**/*.{json,jsonc,json5}",
 					"bp_*/animation_controllers/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/animationController/main.json"
+				"url": "./schemas/dist/2boyuar3yx5mq.json"
 			},
 			{
 				"fileMatch": [
@@ -422,7 +421,7 @@
 					"*bp/animations/**/*.{json,jsonc,json5}",
 					"bp_*/animations/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/animation/main.json"
+				"url": "./schemas/dist/3brripecgsfrt.json"
 			},
 			{
 				"fileMatch": [
@@ -432,7 +431,7 @@
 					"*bp/biomes/**/*.{json,jsonc,json5}",
 					"bp_*/biomes/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/biome/main.json"
+				"url": "./schemas/dist/37mg7rx0rnlir.json"
 			},
 			{
 				"fileMatch": [
@@ -442,7 +441,7 @@
 					"*bp/blocks/**/*.{json,jsonc,json5}",
 					"bp_*/blocks/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/block/main.json"
+				"url": "./schemas/dist/17mturr4ck5k6.json"
 			},
 			{
 				"fileMatch": [
@@ -452,7 +451,7 @@
 					"*bp/cameras/presets/**/*.{json,jsonc,json5}",
 					"bp_*/cameras/presets/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/cameraPreset/main.json"
+				"url": "./schemas/dist/1puulzn9y8vk3.json"
 			},
 			{
 				"fileMatch": [
@@ -462,7 +461,7 @@
 					"*bp/dialogue/**/*.{json,jsonc,json5}",
 					"bp_*/dialogue/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dialogue/main.json"
+				"url": "./schemas/dist/326jv9bc7amdu.json"
 			},
 			{
 				"fileMatch": [
@@ -472,7 +471,7 @@
 					"*bp/dimensions/**/*.{json,jsonc,json5}",
 					"bp_*/dimensions/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dimension/main.json"
+				"url": "./schemas/dist/1mvl6f4veag9t.json"
 			},
 			{
 				"fileMatch": [
@@ -482,7 +481,7 @@
 					"*bp/entities/**/*.{json,jsonc,json5}",
 					"bp_*/entities/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/entity/main.json"
+				"url": "./schemas/dist/167ctgrnw7wov.json"
 			},
 			{
 				"fileMatch": [
@@ -492,7 +491,7 @@
 					"*bp/feature_rules/**/*.{json,jsonc,json5}",
 					"bp_*/feature_rules/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/featureRule/main.json"
+				"url": "./schemas/dist/3gd3jiyz96g25.json"
 			},
 			{
 				"fileMatch": [
@@ -502,7 +501,7 @@
 					"*bp/features/**/*.{json,jsonc,json5}",
 					"bp_*/features/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/feature/main.json"
+				"url": "./schemas/dist/107uayhaabgau.json"
 			},
 			{
 				"fileMatch": [
@@ -512,7 +511,7 @@
 					"*bp/functions/tick.{json,jsonc,json5}",
 					"bp_*/functions/tick.{json,jsonc,json5}"
 				],
-				"url": "./schemas/tick/main.json"
+				"url": "./schemas/dist/3vs4xl1qnmxtc.json"
 			},
 			{
 				"fileMatch": [
@@ -522,7 +521,7 @@
 					"*bp/item_catalog/crafting_item_catalog.{json,jsonc,json5}",
 					"bp_*/item_catalog/crafting_item_catalog.{json,jsonc,json5}"
 				],
-				"url": "./schemas/craftingItemCatalog/main.json"
+				"url": "./schemas/dist/1kqp0rns7xbty.json"
 			},
 			{
 				"fileMatch": [
@@ -532,7 +531,7 @@
 					"*bp/items/**/*.{json,jsonc,json5}",
 					"bp_*/items/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/item/main.json"
+				"url": "./schemas/dist/3ptn4e3sqrs8w.json"
 			},
 			{
 				"fileMatch": [
@@ -542,7 +541,7 @@
 					"*bp/loot_tables/**/*.{json,jsonc,json5}",
 					"bp_*/loot_tables/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/lootTable/main.json"
+				"url": "./schemas/dist/261cnxjqrw5uz.json"
 			},
 			{
 				"fileMatch": [
@@ -552,7 +551,7 @@
 					"*bp/manifest.{json,jsonc,json5}",
 					"bp_*/manifest.{json,jsonc,json5}"
 				],
-				"url": "./schemas/manifest/main.json"
+				"url": "./schemas/dist/1gffnlk445ly0.json"
 			},
 			{
 				"fileMatch": [
@@ -562,7 +561,7 @@
 					"*bp/recipes/**/*.{json,jsonc,json5}",
 					"bp_*/recipes/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/recipe/main.json"
+				"url": "./schemas/dist/36z4u96apnz3u.json"
 			},
 			{
 				"fileMatch": [
@@ -572,7 +571,17 @@
 					"*bp/shapes/**/*.{json,jsonc,json5}",
 					"bp_*/shapes/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/voxelShape/main.json"
+				"url": "./schemas/dist/23qqff5nusuxk.json"
+			},
+			{
+				"fileMatch": [
+					"behavior_pack/sounds/sound_definitions.{json,jsonc,json5}",
+					"*BP/sounds/sound_definitions.{json,jsonc,json5}",
+					"BP_*/sounds/sound_definitions.{json,jsonc,json5}",
+					"*bp/sounds/sound_definitions.{json,jsonc,json5}",
+					"bp_*/sounds/sound_definitions.{json,jsonc,json5}"
+				],
+				"url": "./schemas/dist/12yj1g1rphp7v.json"
 			},
 			{
 				"fileMatch": [
@@ -582,7 +591,7 @@
 					"*bp/spawn_rules/**/*.{json,jsonc,json5}",
 					"bp_*/spawn_rules/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/spawnRule/main.json"
+				"url": "./schemas/dist/2z9maij01ihyg.json"
 			},
 			{
 				"fileMatch": [
@@ -592,17 +601,7 @@
 					"*bp/trading/**/*.{json,jsonc,json5}",
 					"bp_*/trading/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/tradeTable/main.json"
-			},
-			{
-				"fileMatch": [
-					"behavior_pack/volumes/**/*.{json,jsonc,json5}",
-					"*BP/volumes/**/*.{json,jsonc,json5}",
-					"BP_*/volumes/**/*.{json,jsonc,json5}",
-					"*bp/volumes/**/*.{json,jsonc,json5}",
-					"bp_*/volumes/**/*.{json,jsonc,json5}"
-				],
-				"url": "./schemas/volume/main.json"
+				"url": "./schemas/dist/2brrtykuahm1i.json"
 			},
 			{
 				"fileMatch": [
@@ -612,7 +611,7 @@
 					"*bp/worldgen/processors/**/*.{json,jsonc,json5}",
 					"bp_*/worldgen/processors/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/processorList/main.json"
+				"url": "./schemas/dist/3oydz8m515qu5.json"
 			},
 			{
 				"fileMatch": [
@@ -622,7 +621,7 @@
 					"*bp/worldgen/structure_sets/**/*.{json,jsonc,json5}",
 					"bp_*/worldgen/structure_sets/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/structureSet/main.json"
+				"url": "./schemas/dist/3lb38l38lpmqk.json"
 			},
 			{
 				"fileMatch": [
@@ -632,7 +631,7 @@
 					"*bp/worldgen/structures/**/*.{json,jsonc,json5}",
 					"bp_*/worldgen/structures/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/jigsawStructure/main.json"
+				"url": "./schemas/dist/2w7o1ak63b94f.json"
 			},
 			{
 				"fileMatch": [
@@ -642,7 +641,7 @@
 					"*bp/worldgen/template_pools/**/*.{json,jsonc,json5}",
 					"bp_*/worldgen/template_pools/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/templatePool/main.json"
+				"url": "./schemas/dist/3i3nh3fh54lvy.json"
 			},
 			{
 				"fileMatch": [
@@ -650,9 +649,14 @@
 					"*RP/animation_controllers/**/*.{json,jsonc,json5}",
 					"RP_*/animation_controllers/**/*.{json,jsonc,json5}",
 					"*rp/animation_controllers/**/*.{json,jsonc,json5}",
-					"rp_*/animation_controllers/**/*.{json,jsonc,json5}"
+					"rp_*/animation_controllers/**/*.{json,jsonc,json5}",
+					"resource_pack/subpacks/*/animation_controllers/**/*.{json,jsonc,json5}",
+					"*RP/subpacks/*/animation_controllers/**/*.{json,jsonc,json5}",
+					"RP_*/subpacks/*/animation_controllers/**/*.{json,jsonc,json5}",
+					"*rp/subpacks/*/animation_controllers/**/*.{json,jsonc,json5}",
+					"rp_*/subpacks/*/animation_controllers/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/clientAnimationController/main.json"
+				"url": "./schemas/dist/bhvhvf0jhg3a.json"
 			},
 			{
 				"fileMatch": [
@@ -660,9 +664,14 @@
 					"*RP/animations/**/*.{json,jsonc,json5}",
 					"RP_*/animations/**/*.{json,jsonc,json5}",
 					"*rp/animations/**/*.{json,jsonc,json5}",
-					"rp_*/animations/**/*.{json,jsonc,json5}"
+					"rp_*/animations/**/*.{json,jsonc,json5}",
+					"resource_pack/subpacks/*/animations/**/*.{json,jsonc,json5}",
+					"*RP/subpacks/*/animations/**/*.{json,jsonc,json5}",
+					"RP_*/subpacks/*/animations/**/*.{json,jsonc,json5}",
+					"*rp/subpacks/*/animations/**/*.{json,jsonc,json5}",
+					"rp_*/subpacks/*/animations/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/clientAnimation/main.json"
+				"url": "./schemas/dist/1lre2zdnuwl1j.json"
 			},
 			{
 				"fileMatch": [
@@ -670,9 +679,14 @@
 					"*RP/atmospherics/**/*.{json,jsonc,json5}",
 					"RP_*/atmospherics/**/*.{json,jsonc,json5}",
 					"*rp/atmospherics/**/*.{json,jsonc,json5}",
-					"rp_*/atmospherics/**/*.{json,jsonc,json5}"
+					"rp_*/atmospherics/**/*.{json,jsonc,json5}",
+					"resource_pack/subpacks/*/atmospherics/**/*.{json,jsonc,json5}",
+					"*RP/subpacks/*/atmospherics/**/*.{json,jsonc,json5}",
+					"RP_*/subpacks/*/atmospherics/**/*.{json,jsonc,json5}",
+					"*rp/subpacks/*/atmospherics/**/*.{json,jsonc,json5}",
+					"rp_*/subpacks/*/atmospherics/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/atmosphereSettings/main.json"
+				"url": "./schemas/dist/30moloeacw9sa.json"
 			},
 			{
 				"fileMatch": [
@@ -680,9 +694,14 @@
 					"*RP/attachables/**/*.{json,jsonc,json5}",
 					"RP_*/attachables/**/*.{json,jsonc,json5}",
 					"*rp/attachables/**/*.{json,jsonc,json5}",
-					"rp_*/attachables/**/*.{json,jsonc,json5}"
+					"rp_*/attachables/**/*.{json,jsonc,json5}",
+					"resource_pack/subpacks/*/attachables/**/*.{json,jsonc,json5}",
+					"*RP/subpacks/*/attachables/**/*.{json,jsonc,json5}",
+					"RP_*/subpacks/*/attachables/**/*.{json,jsonc,json5}",
+					"*rp/subpacks/*/attachables/**/*.{json,jsonc,json5}",
+					"rp_*/subpacks/*/attachables/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/attachable/main.json"
+				"url": "./schemas/dist/zifnfhfwwbeg.json"
 			},
 			{
 				"fileMatch": [
@@ -690,9 +709,14 @@
 					"*RP/biomes_client.{json,jsonc,json5}",
 					"RP_*/biomes_client.{json,jsonc,json5}",
 					"*rp/biomes_client.{json,jsonc,json5}",
-					"rp_*/biomes_client.{json,jsonc,json5}"
+					"rp_*/biomes_client.{json,jsonc,json5}",
+					"resource_pack/subpacks/*/biomes_client.{json,jsonc,json5}",
+					"*RP/subpacks/*/biomes_client.{json,jsonc,json5}",
+					"RP_*/subpacks/*/biomes_client.{json,jsonc,json5}",
+					"*rp/subpacks/*/biomes_client.{json,jsonc,json5}",
+					"rp_*/subpacks/*/biomes_client.{json,jsonc,json5}"
 				],
-				"url": "./schemas/biomesClient/main.json"
+				"url": "./schemas/dist/3die4g1pmwhr0.json"
 			},
 			{
 				"fileMatch": [
@@ -700,9 +724,14 @@
 					"*RP/biomes/**/*.{json,jsonc,json5}",
 					"RP_*/biomes/**/*.{json,jsonc,json5}",
 					"*rp/biomes/**/*.{json,jsonc,json5}",
-					"rp_*/biomes/**/*.{json,jsonc,json5}"
+					"rp_*/biomes/**/*.{json,jsonc,json5}",
+					"resource_pack/subpacks/*/biomes/**/*.{json,jsonc,json5}",
+					"*RP/subpacks/*/biomes/**/*.{json,jsonc,json5}",
+					"RP_*/subpacks/*/biomes/**/*.{json,jsonc,json5}",
+					"*rp/subpacks/*/biomes/**/*.{json,jsonc,json5}",
+					"rp_*/subpacks/*/biomes/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/clientBiome/main.json"
+				"url": "./schemas/dist/cexrds8lsabv.json"
 			},
 			{
 				"fileMatch": [
@@ -710,9 +739,14 @@
 					"*RP/block_culling/**/*.{json,jsonc,json5}",
 					"RP_*/block_culling/**/*.{json,jsonc,json5}",
 					"*rp/block_culling/**/*.{json,jsonc,json5}",
-					"rp_*/block_culling/**/*.{json,jsonc,json5}"
+					"rp_*/block_culling/**/*.{json,jsonc,json5}",
+					"resource_pack/subpacks/*/block_culling/**/*.{json,jsonc,json5}",
+					"*RP/subpacks/*/block_culling/**/*.{json,jsonc,json5}",
+					"RP_*/subpacks/*/block_culling/**/*.{json,jsonc,json5}",
+					"*rp/subpacks/*/block_culling/**/*.{json,jsonc,json5}",
+					"rp_*/subpacks/*/block_culling/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/blockCulling/main.json"
+				"url": "./schemas/dist/ncke8x55mzmj.json"
 			},
 			{
 				"fileMatch": [
@@ -720,9 +754,14 @@
 					"*RP/blocks.{json,jsonc,json5}",
 					"RP_*/blocks.{json,jsonc,json5}",
 					"*rp/blocks.{json,jsonc,json5}",
-					"rp_*/blocks.{json,jsonc,json5}"
+					"rp_*/blocks.{json,jsonc,json5}",
+					"resource_pack/subpacks/*/blocks.{json,jsonc,json5}",
+					"*RP/subpacks/*/blocks.{json,jsonc,json5}",
+					"RP_*/subpacks/*/blocks.{json,jsonc,json5}",
+					"*rp/subpacks/*/blocks.{json,jsonc,json5}",
+					"rp_*/subpacks/*/blocks.{json,jsonc,json5}"
 				],
-				"url": "./schemas/clientBlock/main.json"
+				"url": "./schemas/dist/24gm2nne3b0wf.json"
 			},
 			{
 				"fileMatch": [
@@ -730,9 +769,14 @@
 					"*RP/color_grading/**/*.{json,jsonc,json5}",
 					"RP_*/color_grading/**/*.{json,jsonc,json5}",
 					"*rp/color_grading/**/*.{json,jsonc,json5}",
-					"rp_*/color_grading/**/*.{json,jsonc,json5}"
+					"rp_*/color_grading/**/*.{json,jsonc,json5}",
+					"resource_pack/subpacks/*/color_grading/**/*.{json,jsonc,json5}",
+					"*RP/subpacks/*/color_grading/**/*.{json,jsonc,json5}",
+					"RP_*/subpacks/*/color_grading/**/*.{json,jsonc,json5}",
+					"*rp/subpacks/*/color_grading/**/*.{json,jsonc,json5}",
+					"rp_*/subpacks/*/color_grading/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/colorGradingSettings/main.json"
+				"url": "./schemas/dist/1temy4vapwjm3.json"
 			},
 			{
 				"fileMatch": [
@@ -740,9 +784,14 @@
 					"*RP/cubemaps/**/*.{json,jsonc,json5}",
 					"RP_*/cubemaps/**/*.{json,jsonc,json5}",
 					"*rp/cubemaps/**/*.{json,jsonc,json5}",
-					"rp_*/cubemaps/**/*.{json,jsonc,json5}"
+					"rp_*/cubemaps/**/*.{json,jsonc,json5}",
+					"resource_pack/subpacks/*/cubemaps/**/*.{json,jsonc,json5}",
+					"*RP/subpacks/*/cubemaps/**/*.{json,jsonc,json5}",
+					"RP_*/subpacks/*/cubemaps/**/*.{json,jsonc,json5}",
+					"*rp/subpacks/*/cubemaps/**/*.{json,jsonc,json5}",
+					"rp_*/subpacks/*/cubemaps/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/cubemapSettings/main.json"
+				"url": "./schemas/dist/1e29jatgkrtu3.json"
 			},
 			{
 				"fileMatch": [
@@ -750,9 +799,14 @@
 					"*RP/entity/**/*.{json,jsonc,json5}",
 					"RP_*/entity/**/*.{json,jsonc,json5}",
 					"*rp/entity/**/*.{json,jsonc,json5}",
-					"rp_*/entity/**/*.{json,jsonc,json5}"
+					"rp_*/entity/**/*.{json,jsonc,json5}",
+					"resource_pack/subpacks/*/entity/**/*.{json,jsonc,json5}",
+					"*RP/subpacks/*/entity/**/*.{json,jsonc,json5}",
+					"RP_*/subpacks/*/entity/**/*.{json,jsonc,json5}",
+					"*rp/subpacks/*/entity/**/*.{json,jsonc,json5}",
+					"rp_*/subpacks/*/entity/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/clientEntity/main.json"
+				"url": "./schemas/dist/2qa45s8e68lfb.json"
 			},
 			{
 				"fileMatch": [
@@ -760,9 +814,29 @@
 					"*RP/fogs/**/*.{json,jsonc,json5}",
 					"RP_*/fogs/**/*.{json,jsonc,json5}",
 					"*rp/fogs/**/*.{json,jsonc,json5}",
-					"rp_*/fogs/**/*.{json,jsonc,json5}"
+					"rp_*/fogs/**/*.{json,jsonc,json5}",
+					"resource_pack/subpacks/*/fogs/**/*.{json,jsonc,json5}",
+					"*RP/subpacks/*/fogs/**/*.{json,jsonc,json5}",
+					"RP_*/subpacks/*/fogs/**/*.{json,jsonc,json5}",
+					"*rp/subpacks/*/fogs/**/*.{json,jsonc,json5}",
+					"rp_*/subpacks/*/fogs/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/fog/main.json"
+				"url": "./schemas/dist/1ha5rglktybun.json"
+			},
+			{
+				"fileMatch": [
+					"resource_pack/font/**/*.{json,jsonc,json5}",
+					"*RP/font/**/*.{json,jsonc,json5}",
+					"RP_*/font/**/*.{json,jsonc,json5}",
+					"*rp/font/**/*.{json,jsonc,json5}",
+					"rp_*/font/**/*.{json,jsonc,json5}",
+					"resource_pack/subpacks/*/font/**/*.{json,jsonc,json5}",
+					"*RP/subpacks/*/font/**/*.{json,jsonc,json5}",
+					"RP_*/subpacks/*/font/**/*.{json,jsonc,json5}",
+					"*rp/subpacks/*/font/**/*.{json,jsonc,json5}",
+					"rp_*/subpacks/*/font/**/*.{json,jsonc,json5}"
+				],
+				"url": "./schemas/dist/3vbunsre1dg82.json"
 			},
 			{
 				"fileMatch": [
@@ -770,9 +844,14 @@
 					"*RP/items/**/*.{json,jsonc,json5}",
 					"RP_*/items/**/*.{json,jsonc,json5}",
 					"*rp/items/**/*.{json,jsonc,json5}",
-					"rp_*/items/**/*.{json,jsonc,json5}"
+					"rp_*/items/**/*.{json,jsonc,json5}",
+					"resource_pack/subpacks/*/items/**/*.{json,jsonc,json5}",
+					"*RP/subpacks/*/items/**/*.{json,jsonc,json5}",
+					"RP_*/subpacks/*/items/**/*.{json,jsonc,json5}",
+					"*rp/subpacks/*/items/**/*.{json,jsonc,json5}",
+					"rp_*/subpacks/*/items/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/clientItem/main.json"
+				"url": "./schemas/dist/13u0fcyjmq84n.json"
 			},
 			{
 				"fileMatch": [
@@ -780,9 +859,14 @@
 					"*RP/lighting/**/*.{json,jsonc,json5}",
 					"RP_*/lighting/**/*.{json,jsonc,json5}",
 					"*rp/lighting/**/*.{json,jsonc,json5}",
-					"rp_*/lighting/**/*.{json,jsonc,json5}"
+					"rp_*/lighting/**/*.{json,jsonc,json5}",
+					"resource_pack/subpacks/*/lighting/**/*.{json,jsonc,json5}",
+					"*RP/subpacks/*/lighting/**/*.{json,jsonc,json5}",
+					"RP_*/subpacks/*/lighting/**/*.{json,jsonc,json5}",
+					"*rp/subpacks/*/lighting/**/*.{json,jsonc,json5}",
+					"rp_*/subpacks/*/lighting/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/lightingSettings/main.json"
+				"url": "./schemas/dist/3fbv5fmy0zut1.json"
 			},
 			{
 				"fileMatch": [
@@ -790,9 +874,14 @@
 					"*RP/local_lighting/local_lighting.{json,jsonc,json5}",
 					"RP_*/local_lighting/local_lighting.{json,jsonc,json5}",
 					"*rp/local_lighting/local_lighting.{json,jsonc,json5}",
-					"rp_*/local_lighting/local_lighting.{json,jsonc,json5}"
+					"rp_*/local_lighting/local_lighting.{json,jsonc,json5}",
+					"resource_pack/subpacks/*/local_lighting/local_lighting.{json,jsonc,json5}",
+					"*RP/subpacks/*/local_lighting/local_lighting.{json,jsonc,json5}",
+					"RP_*/subpacks/*/local_lighting/local_lighting.{json,jsonc,json5}",
+					"*rp/subpacks/*/local_lighting/local_lighting.{json,jsonc,json5}",
+					"rp_*/subpacks/*/local_lighting/local_lighting.{json,jsonc,json5}"
 				],
-				"url": "./schemas/localLightSettings/main.json"
+				"url": "./schemas/dist/2p7sgd7aqm7ja.json"
 			},
 			{
 				"fileMatch": [
@@ -802,17 +891,22 @@
 					"*rp/manifest.{json,jsonc,json5}",
 					"rp_*/manifest.{json,jsonc,json5}"
 				],
-				"url": "./schemas/manifest/main.json"
+				"url": "./schemas/dist/1gffnlk445ly0.json"
 			},
 			{
 				"fileMatch": [
-					"resource_pack/materials/**/*.material",
-					"*RP/materials/**/*.material",
-					"RP_*/materials/**/*.material",
-					"*rp/materials/**/*.material",
-					"rp_*/materials/**/*.material"
+					"resource_pack/materials/*.material",
+					"*RP/materials/*.material",
+					"RP_*/materials/*.material",
+					"*rp/materials/*.material",
+					"rp_*/materials/*.material",
+					"resource_pack/subpacks/*/materials/*.material",
+					"*RP/subpacks/*/materials/*.material",
+					"RP_*/subpacks/*/materials/*.material",
+					"*rp/subpacks/*/materials/*.material",
+					"rp_*/subpacks/*/materials/*.material"
 				],
-				"url": "./schemas/material/main.json"
+				"url": "./schemas/dist/1r4413fni6un1.json"
 			},
 			{
 				"fileMatch": [
@@ -820,9 +914,14 @@
 					"*RP/models/**/*.{json,jsonc,json5}",
 					"RP_*/models/**/*.{json,jsonc,json5}",
 					"*rp/models/**/*.{json,jsonc,json5}",
-					"rp_*/models/**/*.{json,jsonc,json5}"
+					"rp_*/models/**/*.{json,jsonc,json5}",
+					"resource_pack/subpacks/*/models/**/*.{json,jsonc,json5}",
+					"*RP/subpacks/*/models/**/*.{json,jsonc,json5}",
+					"RP_*/subpacks/*/models/**/*.{json,jsonc,json5}",
+					"*rp/subpacks/*/models/**/*.{json,jsonc,json5}",
+					"rp_*/subpacks/*/models/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/geometry/main.json"
+				"url": "./schemas/dist/bqw1cj8lvpck.json"
 			},
 			{
 				"fileMatch": [
@@ -830,9 +929,14 @@
 					"*RP/particles/**/*.{json,jsonc,json5}",
 					"RP_*/particles/**/*.{json,jsonc,json5}",
 					"*rp/particles/**/*.{json,jsonc,json5}",
-					"rp_*/particles/**/*.{json,jsonc,json5}"
+					"rp_*/particles/**/*.{json,jsonc,json5}",
+					"resource_pack/subpacks/*/particles/**/*.{json,jsonc,json5}",
+					"*RP/subpacks/*/particles/**/*.{json,jsonc,json5}",
+					"RP_*/subpacks/*/particles/**/*.{json,jsonc,json5}",
+					"*rp/subpacks/*/particles/**/*.{json,jsonc,json5}",
+					"rp_*/subpacks/*/particles/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/particle/main.json"
+				"url": "./schemas/dist/2o1zemdavetne.json"
 			},
 			{
 				"fileMatch": [
@@ -840,9 +944,14 @@
 					"*RP/pbr/global.{json,jsonc,json5}",
 					"RP_*/pbr/global.{json,jsonc,json5}",
 					"*rp/pbr/global.{json,jsonc,json5}",
-					"rp_*/pbr/global.{json,jsonc,json5}"
+					"rp_*/pbr/global.{json,jsonc,json5}",
+					"resource_pack/subpacks/*/pbr/global.{json,jsonc,json5}",
+					"*RP/subpacks/*/pbr/global.{json,jsonc,json5}",
+					"RP_*/subpacks/*/pbr/global.{json,jsonc,json5}",
+					"*rp/subpacks/*/pbr/global.{json,jsonc,json5}",
+					"rp_*/subpacks/*/pbr/global.{json,jsonc,json5}"
 				],
-				"url": "./schemas/pbrFallbackSettings/main.json"
+				"url": "./schemas/dist/3lnret8grhcb7.json"
 			},
 			{
 				"fileMatch": [
@@ -850,9 +959,14 @@
 					"*RP/point_lights/global.{json,jsonc,json5}",
 					"RP_*/point_lights/global.{json,jsonc,json5}",
 					"*rp/point_lights/global.{json,jsonc,json5}",
-					"rp_*/point_lights/global.{json,jsonc,json5}"
+					"rp_*/point_lights/global.{json,jsonc,json5}",
+					"resource_pack/subpacks/*/point_lights/global.{json,jsonc,json5}",
+					"*RP/subpacks/*/point_lights/global.{json,jsonc,json5}",
+					"RP_*/subpacks/*/point_lights/global.{json,jsonc,json5}",
+					"*rp/subpacks/*/point_lights/global.{json,jsonc,json5}",
+					"rp_*/subpacks/*/point_lights/global.{json,jsonc,json5}"
 				],
-				"url": "./schemas/pointLightSettings/main.json"
+				"url": "./schemas/dist/2usqxmfmlfhdl.json"
 			},
 			{
 				"fileMatch": [
@@ -860,9 +974,14 @@
 					"*RP/render_controllers/**/*.{json,jsonc,json5}",
 					"RP_*/render_controllers/**/*.{json,jsonc,json5}",
 					"*rp/render_controllers/**/*.{json,jsonc,json5}",
-					"rp_*/render_controllers/**/*.{json,jsonc,json5}"
+					"rp_*/render_controllers/**/*.{json,jsonc,json5}",
+					"resource_pack/subpacks/*/render_controllers/**/*.{json,jsonc,json5}",
+					"*RP/subpacks/*/render_controllers/**/*.{json,jsonc,json5}",
+					"RP_*/subpacks/*/render_controllers/**/*.{json,jsonc,json5}",
+					"*rp/subpacks/*/render_controllers/**/*.{json,jsonc,json5}",
+					"rp_*/subpacks/*/render_controllers/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/renderController/main.json"
+				"url": "./schemas/dist/r6sv6mtf5nwn.json"
 			},
 			{
 				"fileMatch": [
@@ -870,9 +989,14 @@
 					"*RP/shadows/global.{json,jsonc,json5}",
 					"RP_*/shadows/global.{json,jsonc,json5}",
 					"*rp/shadows/global.{json,jsonc,json5}",
-					"rp_*/shadows/global.{json,jsonc,json5}"
+					"rp_*/shadows/global.{json,jsonc,json5}",
+					"resource_pack/subpacks/*/shadows/global.{json,jsonc,json5}",
+					"*RP/subpacks/*/shadows/global.{json,jsonc,json5}",
+					"RP_*/subpacks/*/shadows/global.{json,jsonc,json5}",
+					"*rp/subpacks/*/shadows/global.{json,jsonc,json5}",
+					"rp_*/subpacks/*/shadows/global.{json,jsonc,json5}"
 				],
-				"url": "./schemas/shadowSettings/main.json"
+				"url": "./schemas/dist/1bnxdimx96cxa.json"
 			},
 			{
 				"fileMatch": [
@@ -880,9 +1004,14 @@
 					"*RP/sounds.{json,jsonc,json5}",
 					"RP_*/sounds.{json,jsonc,json5}",
 					"*rp/sounds.{json,jsonc,json5}",
-					"rp_*/sounds.{json,jsonc,json5}"
+					"rp_*/sounds.{json,jsonc,json5}",
+					"resource_pack/subpacks/*/sounds.{json,jsonc,json5}",
+					"*RP/subpacks/*/sounds.{json,jsonc,json5}",
+					"RP_*/subpacks/*/sounds.{json,jsonc,json5}",
+					"*rp/subpacks/*/sounds.{json,jsonc,json5}",
+					"rp_*/subpacks/*/sounds.{json,jsonc,json5}"
 				],
-				"url": "./schemas/clientSound/main.json"
+				"url": "./schemas/dist/30ng2ynzdpiq9.json"
 			},
 			{
 				"fileMatch": [
@@ -890,9 +1019,14 @@
 					"*RP/sounds/music_definitions.{json,jsonc,json5}",
 					"RP_*/sounds/music_definitions.{json,jsonc,json5}",
 					"*rp/sounds/music_definitions.{json,jsonc,json5}",
-					"rp_*/sounds/music_definitions.{json,jsonc,json5}"
+					"rp_*/sounds/music_definitions.{json,jsonc,json5}",
+					"resource_pack/subpacks/*/sounds/music_definitions.{json,jsonc,json5}",
+					"*RP/subpacks/*/sounds/music_definitions.{json,jsonc,json5}",
+					"RP_*/subpacks/*/sounds/music_definitions.{json,jsonc,json5}",
+					"*rp/subpacks/*/sounds/music_definitions.{json,jsonc,json5}",
+					"rp_*/subpacks/*/sounds/music_definitions.{json,jsonc,json5}"
 				],
-				"url": "./schemas/musicDefinition/main.json"
+				"url": "./schemas/dist/2qp0mdl6h6xo6.json"
 			},
 			{
 				"fileMatch": [
@@ -900,9 +1034,14 @@
 					"*RP/sounds/sound_definitions.{json,jsonc,json5}",
 					"RP_*/sounds/sound_definitions.{json,jsonc,json5}",
 					"*rp/sounds/sound_definitions.{json,jsonc,json5}",
-					"rp_*/sounds/sound_definitions.{json,jsonc,json5}"
+					"rp_*/sounds/sound_definitions.{json,jsonc,json5}",
+					"resource_pack/subpacks/*/sounds/sound_definitions.{json,jsonc,json5}",
+					"*RP/subpacks/*/sounds/sound_definitions.{json,jsonc,json5}",
+					"RP_*/subpacks/*/sounds/sound_definitions.{json,jsonc,json5}",
+					"*rp/subpacks/*/sounds/sound_definitions.{json,jsonc,json5}",
+					"rp_*/subpacks/*/sounds/sound_definitions.{json,jsonc,json5}"
 				],
-				"url": "./schemas/soundDefinition/main.json"
+				"url": "./schemas/dist/1xsp90n4rm0hx.json"
 			},
 			{
 				"fileMatch": [
@@ -910,9 +1049,29 @@
 					"*RP/splashes.{json,jsonc,json5}",
 					"RP_*/splashes.{json,jsonc,json5}",
 					"*rp/splashes.{json,jsonc,json5}",
-					"rp_*/splashes.{json,jsonc,json5}"
+					"rp_*/splashes.{json,jsonc,json5}",
+					"resource_pack/subpacks/*/splashes.{json,jsonc,json5}",
+					"*RP/subpacks/*/splashes.{json,jsonc,json5}",
+					"RP_*/subpacks/*/splashes.{json,jsonc,json5}",
+					"*rp/subpacks/*/splashes.{json,jsonc,json5}",
+					"rp_*/subpacks/*/splashes.{json,jsonc,json5}"
 				],
-				"url": "./schemas/splashes/main.json"
+				"url": "./schemas/dist/1woz8evxzg3j3.json"
+			},
+			{
+				"fileMatch": [
+					"resource_pack/texts/languages.{json,jsonc,json5}",
+					"*RP/texts/languages.{json,jsonc,json5}",
+					"RP_*/texts/languages.{json,jsonc,json5}",
+					"*rp/texts/languages.{json,jsonc,json5}",
+					"rp_*/texts/languages.{json,jsonc,json5}",
+					"resource_pack/subpacks/*/texts/languages.{json,jsonc,json5}",
+					"*RP/subpacks/*/texts/languages.{json,jsonc,json5}",
+					"RP_*/subpacks/*/texts/languages.{json,jsonc,json5}",
+					"*rp/subpacks/*/texts/languages.{json,jsonc,json5}",
+					"rp_*/subpacks/*/texts/languages.{json,jsonc,json5}"
+				],
+				"url": "./schemas/dist/3cgvm7ywp9vx4.json"
 			},
 			{
 				"fileMatch": [
@@ -920,9 +1079,14 @@
 					"*RP/textures/**/*.texture_set.{json,jsonc,json5}",
 					"RP_*/textures/**/*.texture_set.{json,jsonc,json5}",
 					"*rp/textures/**/*.texture_set.{json,jsonc,json5}",
-					"rp_*/textures/**/*.texture_set.{json,jsonc,json5}"
+					"rp_*/textures/**/*.texture_set.{json,jsonc,json5}",
+					"resource_pack/subpacks/*/textures/**/*.texture_set.{json,jsonc,json5}",
+					"*RP/subpacks/*/textures/**/*.texture_set.{json,jsonc,json5}",
+					"RP_*/subpacks/*/textures/**/*.texture_set.{json,jsonc,json5}",
+					"*rp/subpacks/*/textures/**/*.texture_set.{json,jsonc,json5}",
+					"rp_*/subpacks/*/textures/**/*.texture_set.{json,jsonc,json5}"
 				],
-				"url": "./schemas/textureSet/main.json"
+				"url": "./schemas/dist/3aged30wiouph.json"
 			},
 			{
 				"fileMatch": [
@@ -930,9 +1094,14 @@
 					"*RP/textures/flipbook_textures.{json,jsonc,json5}",
 					"RP_*/textures/flipbook_textures.{json,jsonc,json5}",
 					"*rp/textures/flipbook_textures.{json,jsonc,json5}",
-					"rp_*/textures/flipbook_textures.{json,jsonc,json5}"
+					"rp_*/textures/flipbook_textures.{json,jsonc,json5}",
+					"resource_pack/subpacks/*/textures/flipbook_textures.{json,jsonc,json5}",
+					"*RP/subpacks/*/textures/flipbook_textures.{json,jsonc,json5}",
+					"RP_*/subpacks/*/textures/flipbook_textures.{json,jsonc,json5}",
+					"*rp/subpacks/*/textures/flipbook_textures.{json,jsonc,json5}",
+					"rp_*/subpacks/*/textures/flipbook_textures.{json,jsonc,json5}"
 				],
-				"url": "./schemas/flipbookTexture/main.json"
+				"url": "./schemas/dist/2p8std41e4p17.json"
 			},
 			{
 				"fileMatch": [
@@ -940,9 +1109,14 @@
 					"*RP/textures/item_texture.{json,jsonc,json5}",
 					"RP_*/textures/item_texture.{json,jsonc,json5}",
 					"*rp/textures/item_texture.{json,jsonc,json5}",
-					"rp_*/textures/item_texture.{json,jsonc,json5}"
+					"rp_*/textures/item_texture.{json,jsonc,json5}",
+					"resource_pack/subpacks/*/textures/item_texture.{json,jsonc,json5}",
+					"*RP/subpacks/*/textures/item_texture.{json,jsonc,json5}",
+					"RP_*/subpacks/*/textures/item_texture.{json,jsonc,json5}",
+					"*rp/subpacks/*/textures/item_texture.{json,jsonc,json5}",
+					"rp_*/subpacks/*/textures/item_texture.{json,jsonc,json5}"
 				],
-				"url": "./schemas/itemTexture/main.json"
+				"url": "./schemas/dist/3cbk17zuktk2n.json"
 			},
 			{
 				"fileMatch": [
@@ -950,9 +1124,59 @@
 					"*RP/textures/terrain_texture.{json,jsonc,json5}",
 					"RP_*/textures/terrain_texture.{json,jsonc,json5}",
 					"*rp/textures/terrain_texture.{json,jsonc,json5}",
-					"rp_*/textures/terrain_texture.{json,jsonc,json5}"
+					"rp_*/textures/terrain_texture.{json,jsonc,json5}",
+					"resource_pack/subpacks/*/textures/terrain_texture.{json,jsonc,json5}",
+					"*RP/subpacks/*/textures/terrain_texture.{json,jsonc,json5}",
+					"RP_*/subpacks/*/textures/terrain_texture.{json,jsonc,json5}",
+					"*rp/subpacks/*/textures/terrain_texture.{json,jsonc,json5}",
+					"rp_*/subpacks/*/textures/terrain_texture.{json,jsonc,json5}"
 				],
-				"url": "./schemas/terrainTexture/main.json"
+				"url": "./schemas/dist/3rarawk01sw9m.json"
+			},
+			{
+				"fileMatch": [
+					"resource_pack/textures/texture_list.{json,jsonc,json5}",
+					"*RP/textures/texture_list.{json,jsonc,json5}",
+					"RP_*/textures/texture_list.{json,jsonc,json5}",
+					"*rp/textures/texture_list.{json,jsonc,json5}",
+					"rp_*/textures/texture_list.{json,jsonc,json5}",
+					"resource_pack/subpacks/*/textures/texture_list.{json,jsonc,json5}",
+					"*RP/subpacks/*/textures/texture_list.{json,jsonc,json5}",
+					"RP_*/subpacks/*/textures/texture_list.{json,jsonc,json5}",
+					"*rp/subpacks/*/textures/texture_list.{json,jsonc,json5}",
+					"rp_*/subpacks/*/textures/texture_list.{json,jsonc,json5}"
+				],
+				"url": "./schemas/dist/3spklmu2gm70g.json"
+			},
+			{
+				"fileMatch": [
+					"resource_pack/ui/_global_variables.{json,jsonc,json5}",
+					"*RP/ui/_global_variables.{json,jsonc,json5}",
+					"RP_*/ui/_global_variables.{json,jsonc,json5}",
+					"*rp/ui/_global_variables.{json,jsonc,json5}",
+					"rp_*/ui/_global_variables.{json,jsonc,json5}",
+					"resource_pack/subpacks/*/ui/_global_variables.{json,jsonc,json5}",
+					"*RP/subpacks/*/ui/_global_variables.{json,jsonc,json5}",
+					"RP_*/subpacks/*/ui/_global_variables.{json,jsonc,json5}",
+					"*rp/subpacks/*/ui/_global_variables.{json,jsonc,json5}",
+					"rp_*/subpacks/*/ui/_global_variables.{json,jsonc,json5}"
+				],
+				"url": "./schemas/dist/18f08vnssox78.json"
+			},
+			{
+				"fileMatch": [
+					"resource_pack/ui/_ui_defs.{json,jsonc,json5}",
+					"*RP/ui/_ui_defs.{json,jsonc,json5}",
+					"RP_*/ui/_ui_defs.{json,jsonc,json5}",
+					"*rp/ui/_ui_defs.{json,jsonc,json5}",
+					"rp_*/ui/_ui_defs.{json,jsonc,json5}",
+					"resource_pack/subpacks/*/ui/_ui_defs.{json,jsonc,json5}",
+					"*RP/subpacks/*/ui/_ui_defs.{json,jsonc,json5}",
+					"RP_*/subpacks/*/ui/_ui_defs.{json,jsonc,json5}",
+					"*rp/subpacks/*/ui/_ui_defs.{json,jsonc,json5}",
+					"rp_*/subpacks/*/ui/_ui_defs.{json,jsonc,json5}"
+				],
+				"url": "./schemas/dist/3ao9epw3zsj2a.json"
 			},
 			{
 				"fileMatch": [
@@ -960,9 +1184,34 @@
 					"*RP/ui/**/*.{json,jsonc,json5}",
 					"RP_*/ui/**/*.{json,jsonc,json5}",
 					"*rp/ui/**/*.{json,jsonc,json5}",
-					"rp_*/ui/**/*.{json,jsonc,json5}"
+					"rp_*/ui/**/*.{json,jsonc,json5}",
+					"resource_pack/subpacks/*/ui/**/*.{json,jsonc,json5}",
+					"*RP/subpacks/*/ui/**/*.{json,jsonc,json5}",
+					"RP_*/subpacks/*/ui/**/*.{json,jsonc,json5}",
+					"*rp/subpacks/*/ui/**/*.{json,jsonc,json5}",
+					"rp_*/subpacks/*/ui/**/*.{json,jsonc,json5}",
+					"!resource_pack/ui/_ui_defs.{json,jsonc,json5}",
+					"!*RP/ui/_ui_defs.{json,jsonc,json5}",
+					"!RP_*/ui/_ui_defs.{json,jsonc,json5}",
+					"!*rp/ui/_ui_defs.{json,jsonc,json5}",
+					"!rp_*/ui/_ui_defs.{json,jsonc,json5}",
+					"!resource_pack/subpacks/*/ui/_ui_defs.{json,jsonc,json5}",
+					"!*RP/subpacks/*/ui/_ui_defs.{json,jsonc,json5}",
+					"!RP_*/subpacks/*/ui/_ui_defs.{json,jsonc,json5}",
+					"!*rp/subpacks/*/ui/_ui_defs.{json,jsonc,json5}",
+					"!rp_*/subpacks/*/ui/_ui_defs.{json,jsonc,json5}",
+					"!resource_pack/ui/_global_variables.{json,jsonc,json5}",
+					"!*RP/ui/_global_variables.{json,jsonc,json5}",
+					"!RP_*/ui/_global_variables.{json,jsonc,json5}",
+					"!*rp/ui/_global_variables.{json,jsonc,json5}",
+					"!rp_*/ui/_global_variables.{json,jsonc,json5}",
+					"!resource_pack/subpacks/*/ui/_global_variables.{json,jsonc,json5}",
+					"!*RP/subpacks/*/ui/_global_variables.{json,jsonc,json5}",
+					"!RP_*/subpacks/*/ui/_global_variables.{json,jsonc,json5}",
+					"!*rp/subpacks/*/ui/_global_variables.{json,jsonc,json5}",
+					"!rp_*/subpacks/*/ui/_global_variables.{json,jsonc,json5}"
 				],
-				"url": "./schemas/ui/main.json"
+				"url": "./schemas/dist/9okwb4geqo5t.json"
 			},
 			{
 				"fileMatch": [
@@ -970,13 +1219,20 @@
 					"*RP/water/**/*.{json,jsonc,json5}",
 					"RP_*/water/**/*.{json,jsonc,json5}",
 					"*rp/water/**/*.{json,jsonc,json5}",
-					"rp_*/water/**/*.{json,jsonc,json5}"
+					"rp_*/water/**/*.{json,jsonc,json5}",
+					"resource_pack/subpacks/*/water/**/*.{json,jsonc,json5}",
+					"*RP/subpacks/*/water/**/*.{json,jsonc,json5}",
+					"RP_*/subpacks/*/water/**/*.{json,jsonc,json5}",
+					"*rp/subpacks/*/water/**/*.{json,jsonc,json5}",
+					"rp_*/subpacks/*/water/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/waterSettings/main.json"
+				"url": "./schemas/dist/219jj9rsfe4k.json"
 			},
 			{
-				"fileMatch": "skin_pack/skins.{json,jsonc,json5}",
-				"url": "./schemas/skins/main.json"
+				"fileMatch": [
+					"skin_pack/skins.{json,jsonc,json5}"
+				],
+				"url": "./schemas/dist/29q6kz0dlfdx.json"
 			}
 		]
 	}
