@@ -26,7 +26,7 @@
 		"check-types": "tsc --noEmit",
 		"fmt": "dprint fmt",
 		"lint": "eslint src",
-		"clone-schemas": "node scripts/update-schemas.js"
+		"update-schemas": "node scripts/update-schemas.js"
 	},
 	"dependencies": {
 		"modern-tar": "^0.6.1",
