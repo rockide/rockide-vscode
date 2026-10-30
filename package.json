@@ -3,7 +3,7 @@
 	"displayName": "Rockide",
 	"description": "VSCode extension for Minecraft Bedrock that provides rich auto-completions, go-to definitions, and schema validation.",
 	"publisher": "rockide",
-	"version": "0.7.0",
+	"version": "0.8.0",
 	"engines": {
 		"vscode": "^1.99.0"
 	},
