@@ -372,6 +372,16 @@
 				"configuration": "./syntaxes/lang.language-configuration.json"
 			},
 			{
+				"id": "rockide-mcfunction",
+				"aliases": [
+					"Minecraft Function"
+				],
+				"extensions": [
+					".mcfunction"
+				],
+				"configuration": "./syntaxes/mcfunction.language-configuration.json"
+			},
+			{
 				"id": "rockide-molang",
 				"aliases": [
 					"Minecraft Molang"
