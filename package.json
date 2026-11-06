@@ -49,6 +49,7 @@
 	},
 	"activationEvents": [
 		"onCommand:rockide.update",
+		"onFileSystem:rockide-schema",
 		"onLanguage:json",
 		"onLanguage:jsonc",
 		"workspaceContains:**/*.mcfunction",
@@ -401,7 +402,7 @@
 					"*bp/aim_assist/categories/**/*.{json,jsonc,json5}",
 					"bp_*/aim_assist/categories/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/280z5zsn3dvom.json"
+				"url": "rockide-schema:///280z5zsn3dvom.json"
 			},
 			{
 				"fileMatch": [
@@ -411,7 +412,7 @@
 					"*bp/aim_assist/presets/**/*.{json,jsonc,json5}",
 					"bp_*/aim_assist/presets/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/hckthqu0xg61.json"
+				"url": "rockide-schema:///hckthqu0xg61.json"
 			},
 			{
 				"fileMatch": [
@@ -421,7 +422,7 @@
 					"*bp/animation_controllers/**/*.{json,jsonc,json5}",
 					"bp_*/animation_controllers/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/2boyuar3yx5mq.json"
+				"url": "rockide-schema:///2boyuar3yx5mq.json"
 			},
 			{
 				"fileMatch": [
@@ -431,7 +432,7 @@
 					"*bp/animations/**/*.{json,jsonc,json5}",
 					"bp_*/animations/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/3brripecgsfrt.json"
+				"url": "rockide-schema:///3brripecgsfrt.json"
 			},
 			{
 				"fileMatch": [
@@ -441,7 +442,7 @@
 					"*bp/biomes/**/*.{json,jsonc,json5}",
 					"bp_*/biomes/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/37mg7rx0rnlir.json"
+				"url": "rockide-schema:///37mg7rx0rnlir.json"
 			},
 			{
 				"fileMatch": [
@@ -451,7 +452,7 @@
 					"*bp/blocks/**/*.{json,jsonc,json5}",
 					"bp_*/blocks/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/17mturr4ck5k6.json"
+				"url": "rockide-schema:///17mturr4ck5k6.json"
 			},
 			{
 				"fileMatch": [
@@ -461,7 +462,7 @@
 					"*bp/cameras/presets/**/*.{json,jsonc,json5}",
 					"bp_*/cameras/presets/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/1puulzn9y8vk3.json"
+				"url": "rockide-schema:///1puulzn9y8vk3.json"
 			},
 			{
 				"fileMatch": [
@@ -471,7 +472,7 @@
 					"*bp/dialogue/**/*.{json,jsonc,json5}",
 					"bp_*/dialogue/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/326jv9bc7amdu.json"
+				"url": "rockide-schema:///326jv9bc7amdu.json"
 			},
 			{
 				"fileMatch": [
@@ -481,7 +482,7 @@
 					"*bp/dimensions/**/*.{json,jsonc,json5}",
 					"bp_*/dimensions/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/1mvl6f4veag9t.json"
+				"url": "rockide-schema:///1mvl6f4veag9t.json"
 			},
 			{
 				"fileMatch": [
@@ -491,7 +492,7 @@
 					"*bp/entities/**/*.{json,jsonc,json5}",
 					"bp_*/entities/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/167ctgrnw7wov.json"
+				"url": "rockide-schema:///167ctgrnw7wov.json"
 			},
 			{
 				"fileMatch": [
@@ -501,7 +502,7 @@
 					"*bp/feature_rules/**/*.{json,jsonc,json5}",
 					"bp_*/feature_rules/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/3gd3jiyz96g25.json"
+				"url": "rockide-schema:///3gd3jiyz96g25.json"
 			},
 			{
 				"fileMatch": [
@@ -511,7 +512,7 @@
 					"*bp/features/**/*.{json,jsonc,json5}",
 					"bp_*/features/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/107uayhaabgau.json"
+				"url": "rockide-schema:///107uayhaabgau.json"
 			},
 			{
 				"fileMatch": [
@@ -521,7 +522,7 @@
 					"*bp/functions/tick.{json,jsonc,json5}",
 					"bp_*/functions/tick.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/3vs4xl1qnmxtc.json"
+				"url": "rockide-schema:///3vs4xl1qnmxtc.json"
 			},
 			{
 				"fileMatch": [
@@ -531,7 +532,7 @@
 					"*bp/item_catalog/crafting_item_catalog.{json,jsonc,json5}",
 					"bp_*/item_catalog/crafting_item_catalog.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/1kqp0rns7xbty.json"
+				"url": "rockide-schema:///1kqp0rns7xbty.json"
 			},
 			{
 				"fileMatch": [
@@ -541,7 +542,7 @@
 					"*bp/items/**/*.{json,jsonc,json5}",
 					"bp_*/items/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/3ptn4e3sqrs8w.json"
+				"url": "rockide-schema:///3ptn4e3sqrs8w.json"
 			},
 			{
 				"fileMatch": [
@@ -551,7 +552,7 @@
 					"*bp/loot_tables/**/*.{json,jsonc,json5}",
 					"bp_*/loot_tables/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/261cnxjqrw5uz.json"
+				"url": "rockide-schema:///261cnxjqrw5uz.json"
 			},
 			{
 				"fileMatch": [
@@ -561,7 +562,7 @@
 					"*bp/manifest.{json,jsonc,json5}",
 					"bp_*/manifest.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/1gffnlk445ly0.json"
+				"url": "rockide-schema:///1gffnlk445ly0.json"
 			},
 			{
 				"fileMatch": [
@@ -571,7 +572,7 @@
 					"*bp/recipes/**/*.{json,jsonc,json5}",
 					"bp_*/recipes/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/36z4u96apnz3u.json"
+				"url": "rockide-schema:///36z4u96apnz3u.json"
 			},
 			{
 				"fileMatch": [
@@ -581,7 +582,7 @@
 					"*bp/shapes/**/*.{json,jsonc,json5}",
 					"bp_*/shapes/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/23qqff5nusuxk.json"
+				"url": "rockide-schema:///23qqff5nusuxk.json"
 			},
 			{
 				"fileMatch": [
@@ -591,7 +592,7 @@
 					"*bp/sounds/sound_definitions.{json,jsonc,json5}",
 					"bp_*/sounds/sound_definitions.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/12yj1g1rphp7v.json"
+				"url": "rockide-schema:///12yj1g1rphp7v.json"
 			},
 			{
 				"fileMatch": [
@@ -601,7 +602,7 @@
 					"*bp/spawn_rules/**/*.{json,jsonc,json5}",
 					"bp_*/spawn_rules/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/2z9maij01ihyg.json"
+				"url": "rockide-schema:///2z9maij01ihyg.json"
 			},
 			{
 				"fileMatch": [
@@ -611,7 +612,7 @@
 					"*bp/trading/**/*.{json,jsonc,json5}",
 					"bp_*/trading/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/2brrtykuahm1i.json"
+				"url": "rockide-schema:///2brrtykuahm1i.json"
 			},
 			{
 				"fileMatch": [
@@ -621,7 +622,7 @@
 					"*bp/worldgen/processors/**/*.{json,jsonc,json5}",
 					"bp_*/worldgen/processors/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/3oydz8m515qu5.json"
+				"url": "rockide-schema:///3oydz8m515qu5.json"
 			},
 			{
 				"fileMatch": [
@@ -631,7 +632,7 @@
 					"*bp/worldgen/structure_sets/**/*.{json,jsonc,json5}",
 					"bp_*/worldgen/structure_sets/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/3lb38l38lpmqk.json"
+				"url": "rockide-schema:///3lb38l38lpmqk.json"
 			},
 			{
 				"fileMatch": [
@@ -641,7 +642,7 @@
 					"*bp/worldgen/structures/**/*.{json,jsonc,json5}",
 					"bp_*/worldgen/structures/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/2w7o1ak63b94f.json"
+				"url": "rockide-schema:///2w7o1ak63b94f.json"
 			},
 			{
 				"fileMatch": [
@@ -651,7 +652,7 @@
 					"*bp/worldgen/template_pools/**/*.{json,jsonc,json5}",
 					"bp_*/worldgen/template_pools/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/3i3nh3fh54lvy.json"
+				"url": "rockide-schema:///3i3nh3fh54lvy.json"
 			},
 			{
 				"fileMatch": [
@@ -666,7 +667,7 @@
 					"*rp/subpacks/*/animation_controllers/**/*.{json,jsonc,json5}",
 					"rp_*/subpacks/*/animation_controllers/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/bhvhvf0jhg3a.json"
+				"url": "rockide-schema:///bhvhvf0jhg3a.json"
 			},
 			{
 				"fileMatch": [
@@ -681,7 +682,7 @@
 					"*rp/subpacks/*/animations/**/*.{json,jsonc,json5}",
 					"rp_*/subpacks/*/animations/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/1lre2zdnuwl1j.json"
+				"url": "rockide-schema:///1lre2zdnuwl1j.json"
 			},
 			{
 				"fileMatch": [
@@ -696,7 +697,7 @@
 					"*rp/subpacks/*/atmospherics/**/*.{json,jsonc,json5}",
 					"rp_*/subpacks/*/atmospherics/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/30moloeacw9sa.json"
+				"url": "rockide-schema:///30moloeacw9sa.json"
 			},
 			{
 				"fileMatch": [
@@ -711,7 +712,7 @@
 					"*rp/subpacks/*/attachables/**/*.{json,jsonc,json5}",
 					"rp_*/subpacks/*/attachables/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/zifnfhfwwbeg.json"
+				"url": "rockide-schema:///zifnfhfwwbeg.json"
 			},
 			{
 				"fileMatch": [
@@ -726,7 +727,7 @@
 					"*rp/subpacks/*/biomes_client.{json,jsonc,json5}",
 					"rp_*/subpacks/*/biomes_client.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/3die4g1pmwhr0.json"
+				"url": "rockide-schema:///3die4g1pmwhr0.json"
 			},
 			{
 				"fileMatch": [
@@ -741,7 +742,7 @@
 					"*rp/subpacks/*/biomes/**/*.{json,jsonc,json5}",
 					"rp_*/subpacks/*/biomes/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/cexrds8lsabv.json"
+				"url": "rockide-schema:///cexrds8lsabv.json"
 			},
 			{
 				"fileMatch": [
@@ -756,7 +757,7 @@
 					"*rp/subpacks/*/block_culling/**/*.{json,jsonc,json5}",
 					"rp_*/subpacks/*/block_culling/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/ncke8x55mzmj.json"
+				"url": "rockide-schema:///ncke8x55mzmj.json"
 			},
 			{
 				"fileMatch": [
@@ -771,7 +772,7 @@
 					"*rp/subpacks/*/blocks.{json,jsonc,json5}",
 					"rp_*/subpacks/*/blocks.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/24gm2nne3b0wf.json"
+				"url": "rockide-schema:///24gm2nne3b0wf.json"
 			},
 			{
 				"fileMatch": [
@@ -786,7 +787,7 @@
 					"*rp/subpacks/*/color_grading/**/*.{json,jsonc,json5}",
 					"rp_*/subpacks/*/color_grading/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/1temy4vapwjm3.json"
+				"url": "rockide-schema:///1temy4vapwjm3.json"
 			},
 			{
 				"fileMatch": [
@@ -801,7 +802,7 @@
 					"*rp/subpacks/*/cubemaps/**/*.{json,jsonc,json5}",
 					"rp_*/subpacks/*/cubemaps/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/1e29jatgkrtu3.json"
+				"url": "rockide-schema:///1e29jatgkrtu3.json"
 			},
 			{
 				"fileMatch": [
@@ -816,7 +817,7 @@
 					"*rp/subpacks/*/entity/**/*.{json,jsonc,json5}",
 					"rp_*/subpacks/*/entity/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/2qa45s8e68lfb.json"
+				"url": "rockide-schema:///2qa45s8e68lfb.json"
 			},
 			{
 				"fileMatch": [
@@ -831,7 +832,7 @@
 					"*rp/subpacks/*/fogs/**/*.{json,jsonc,json5}",
 					"rp_*/subpacks/*/fogs/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/1ha5rglktybun.json"
+				"url": "rockide-schema:///1ha5rglktybun.json"
 			},
 			{
 				"fileMatch": [
@@ -846,7 +847,7 @@
 					"*rp/subpacks/*/font/**/*.{json,jsonc,json5}",
 					"rp_*/subpacks/*/font/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/3vbunsre1dg82.json"
+				"url": "rockide-schema:///3vbunsre1dg82.json"
 			},
 			{
 				"fileMatch": [
@@ -861,7 +862,7 @@
 					"*rp/subpacks/*/items/**/*.{json,jsonc,json5}",
 					"rp_*/subpacks/*/items/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/13u0fcyjmq84n.json"
+				"url": "rockide-schema:///13u0fcyjmq84n.json"
 			},
 			{
 				"fileMatch": [
@@ -876,7 +877,7 @@
 					"*rp/subpacks/*/lighting/**/*.{json,jsonc,json5}",
 					"rp_*/subpacks/*/lighting/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/3fbv5fmy0zut1.json"
+				"url": "rockide-schema:///3fbv5fmy0zut1.json"
 			},
 			{
 				"fileMatch": [
@@ -891,7 +892,7 @@
 					"*rp/subpacks/*/local_lighting/local_lighting.{json,jsonc,json5}",
 					"rp_*/subpacks/*/local_lighting/local_lighting.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/2p7sgd7aqm7ja.json"
+				"url": "rockide-schema:///2p7sgd7aqm7ja.json"
 			},
 			{
 				"fileMatch": [
@@ -901,7 +902,7 @@
 					"*rp/manifest.{json,jsonc,json5}",
 					"rp_*/manifest.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/1gffnlk445ly0.json"
+				"url": "rockide-schema:///1gffnlk445ly0.json"
 			},
 			{
 				"fileMatch": [
@@ -916,7 +917,7 @@
 					"*rp/subpacks/*/materials/*.material",
 					"rp_*/subpacks/*/materials/*.material"
 				],
-				"url": "./schemas/dist/1r4413fni6un1.json"
+				"url": "rockide-schema:///1r4413fni6un1.json"
 			},
 			{
 				"fileMatch": [
@@ -931,7 +932,7 @@
 					"*rp/subpacks/*/models/**/*.{json,jsonc,json5}",
 					"rp_*/subpacks/*/models/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/bqw1cj8lvpck.json"
+				"url": "rockide-schema:///bqw1cj8lvpck.json"
 			},
 			{
 				"fileMatch": [
@@ -946,7 +947,7 @@
 					"*rp/subpacks/*/particles/**/*.{json,jsonc,json5}",
 					"rp_*/subpacks/*/particles/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/2o1zemdavetne.json"
+				"url": "rockide-schema:///2o1zemdavetne.json"
 			},
 			{
 				"fileMatch": [
@@ -961,7 +962,7 @@
 					"*rp/subpacks/*/pbr/global.{json,jsonc,json5}",
 					"rp_*/subpacks/*/pbr/global.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/3lnret8grhcb7.json"
+				"url": "rockide-schema:///3lnret8grhcb7.json"
 			},
 			{
 				"fileMatch": [
@@ -976,7 +977,7 @@
 					"*rp/subpacks/*/point_lights/global.{json,jsonc,json5}",
 					"rp_*/subpacks/*/point_lights/global.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/2usqxmfmlfhdl.json"
+				"url": "rockide-schema:///2usqxmfmlfhdl.json"
 			},
 			{
 				"fileMatch": [
@@ -991,7 +992,7 @@
 					"*rp/subpacks/*/render_controllers/**/*.{json,jsonc,json5}",
 					"rp_*/subpacks/*/render_controllers/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/r6sv6mtf5nwn.json"
+				"url": "rockide-schema:///r6sv6mtf5nwn.json"
 			},
 			{
 				"fileMatch": [
@@ -1006,7 +1007,7 @@
 					"*rp/subpacks/*/shadows/global.{json,jsonc,json5}",
 					"rp_*/subpacks/*/shadows/global.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/1bnxdimx96cxa.json"
+				"url": "rockide-schema:///1bnxdimx96cxa.json"
 			},
 			{
 				"fileMatch": [
@@ -1021,7 +1022,7 @@
 					"*rp/subpacks/*/sounds.{json,jsonc,json5}",
 					"rp_*/subpacks/*/sounds.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/30ng2ynzdpiq9.json"
+				"url": "rockide-schema:///30ng2ynzdpiq9.json"
 			},
 			{
 				"fileMatch": [
@@ -1036,7 +1037,7 @@
 					"*rp/subpacks/*/sounds/music_definitions.{json,jsonc,json5}",
 					"rp_*/subpacks/*/sounds/music_definitions.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/2qp0mdl6h6xo6.json"
+				"url": "rockide-schema:///2qp0mdl6h6xo6.json"
 			},
 			{
 				"fileMatch": [
@@ -1051,7 +1052,7 @@
 					"*rp/subpacks/*/sounds/sound_definitions.{json,jsonc,json5}",
 					"rp_*/subpacks/*/sounds/sound_definitions.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/1xsp90n4rm0hx.json"
+				"url": "rockide-schema:///1xsp90n4rm0hx.json"
 			},
 			{
 				"fileMatch": [
@@ -1066,7 +1067,7 @@
 					"*rp/subpacks/*/splashes.{json,jsonc,json5}",
 					"rp_*/subpacks/*/splashes.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/1woz8evxzg3j3.json"
+				"url": "rockide-schema:///1woz8evxzg3j3.json"
 			},
 			{
 				"fileMatch": [
@@ -1081,7 +1082,7 @@
 					"*rp/subpacks/*/texts/languages.{json,jsonc,json5}",
 					"rp_*/subpacks/*/texts/languages.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/3cgvm7ywp9vx4.json"
+				"url": "rockide-schema:///3cgvm7ywp9vx4.json"
 			},
 			{
 				"fileMatch": [
@@ -1096,7 +1097,7 @@
 					"*rp/subpacks/*/textures/**/*.texture_set.{json,jsonc,json5}",
 					"rp_*/subpacks/*/textures/**/*.texture_set.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/3aged30wiouph.json"
+				"url": "rockide-schema:///3aged30wiouph.json"
 			},
 			{
 				"fileMatch": [
@@ -1111,7 +1112,7 @@
 					"*rp/subpacks/*/textures/flipbook_textures.{json,jsonc,json5}",
 					"rp_*/subpacks/*/textures/flipbook_textures.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/2p8std41e4p17.json"
+				"url": "rockide-schema:///2p8std41e4p17.json"
 			},
 			{
 				"fileMatch": [
@@ -1126,7 +1127,7 @@
 					"*rp/subpacks/*/textures/item_texture.{json,jsonc,json5}",
 					"rp_*/subpacks/*/textures/item_texture.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/3cbk17zuktk2n.json"
+				"url": "rockide-schema:///3cbk17zuktk2n.json"
 			},
 			{
 				"fileMatch": [
@@ -1141,7 +1142,7 @@
 					"*rp/subpacks/*/textures/terrain_texture.{json,jsonc,json5}",
 					"rp_*/subpacks/*/textures/terrain_texture.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/3rarawk01sw9m.json"
+				"url": "rockide-schema:///3rarawk01sw9m.json"
 			},
 			{
 				"fileMatch": [
@@ -1156,7 +1157,7 @@
 					"*rp/subpacks/*/textures/texture_list.{json,jsonc,json5}",
 					"rp_*/subpacks/*/textures/texture_list.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/3spklmu2gm70g.json"
+				"url": "rockide-schema:///3spklmu2gm70g.json"
 			},
 			{
 				"fileMatch": [
@@ -1171,7 +1172,7 @@
 					"*rp/subpacks/*/ui/_global_variables.{json,jsonc,json5}",
 					"rp_*/subpacks/*/ui/_global_variables.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/18f08vnssox78.json"
+				"url": "rockide-schema:///18f08vnssox78.json"
 			},
 			{
 				"fileMatch": [
@@ -1186,7 +1187,7 @@
 					"*rp/subpacks/*/ui/_ui_defs.{json,jsonc,json5}",
 					"rp_*/subpacks/*/ui/_ui_defs.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/3ao9epw3zsj2a.json"
+				"url": "rockide-schema:///3ao9epw3zsj2a.json"
 			},
 			{
 				"fileMatch": [
@@ -1221,7 +1222,7 @@
 					"!*rp/subpacks/*/ui/_global_variables.{json,jsonc,json5}",
 					"!rp_*/subpacks/*/ui/_global_variables.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/9okwb4geqo5t.json"
+				"url": "rockide-schema:///9okwb4geqo5t.json"
 			},
 			{
 				"fileMatch": [
@@ -1236,13 +1237,13 @@
 					"*rp/subpacks/*/water/**/*.{json,jsonc,json5}",
 					"rp_*/subpacks/*/water/**/*.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/219jj9rsfe4k.json"
+				"url": "rockide-schema:///219jj9rsfe4k.json"
 			},
 			{
 				"fileMatch": [
 					"skin_pack/skins.{json,jsonc,json5}"
 				],
-				"url": "./schemas/dist/29q6kz0dlfdx.json"
+				"url": "rockide-schema:///29q6kz0dlfdx.json"
 			}
 		]
 	}

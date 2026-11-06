@@ -1,22 +1,15 @@
 import * as vscode from "vscode";
-import { startClient, stopClient } from "./lsp";
-import {
-	getDefaultRockidePath,
-	getInstalledRockideExe,
-	promptInstallRockide,
-	updateRockide,
-} from "./rockide";
+import { stopClient } from "./lsp";
+import { startRockide, updateRockide } from "./rockide";
+import { registerSchemaProvider, updateSchemas } from "./schemas";
+import { reportError } from "./utils";
 
-export async function activate(ctx: vscode.ExtensionContext) {
+export function activate(ctx: vscode.ExtensionContext) {
 	ctx.subscriptions.push(
+		registerSchemaProvider(ctx),
 		vscode.commands.registerCommand("rockide.update", async () => {
-			try {
-				await updateRockide(ctx);
-			} catch (err) {
-				if (err instanceof Error) {
-					vscode.window.showErrorMessage(err.message);
-				}
-			}
+			await updateSchemas(ctx).catch(reportError);
+			await updateRockide(ctx).catch(reportError);
 		}),
 		vscode.workspace.onDidChangeConfiguration(async (event) => {
 			if (event.affectsConfiguration("rockide.path")) {
@@ -31,35 +24,8 @@ export async function activate(ctx: vscode.ExtensionContext) {
 		}),
 	);
 
-	let rockideExe = await getInstalledRockideExe(ctx);
-	if (!rockideExe) {
-		try {
-			rockideExe = getDefaultRockidePath(ctx);
-			await promptInstallRockide(rockideExe);
-		} catch (err) {
-			if (err instanceof Error) {
-				vscode.window.showErrorMessage(err.message);
-			}
-			return;
-		}
-	}
-
-	ctx.subscriptions.push(
-		vscode.workspace.onDidChangeConfiguration(async (event) => {
-			if (event.affectsConfiguration("rockide.projectPaths")) {
-				vscode.window.withProgress({
-					location: vscode.ProgressLocation.Notification,
-					title: "Project configuration changed. Restarting language server...",
-				}, async () => {
-					await stopClient();
-					await startClient(rockideExe);
-				});
-			}
-		}),
-	);
-
-	await startClient(rockideExe);
-	await updateRockide(ctx, true);
+	updateSchemas(ctx, true).catch(reportError);
+	startRockide(ctx).catch(reportError);
 }
 
 export async function deactivate() {

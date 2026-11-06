@@ -1,6 +1,6 @@
 import { unpackTar } from "modern-tar";
-import { mkdir, readFile, rm, writeFile } from "node:fs/promises";
-import { dirname, join, posix } from "node:path";
+import { readFile, writeFile } from "node:fs/promises";
+import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { gunzipSync } from "node:zlib";
 
@@ -18,7 +18,6 @@ import { gunzipSync } from "node:zlib";
 const REPO = "rockide/schemas";
 const ASSET_NAME = "schemas.tar.gz";
 const ROOT_DIR = join(dirname(fileURLToPath(import.meta.url)), "..");
-const OUT_DIR = join(ROOT_DIR, "schemas");
 const PKG_PATH = join(ROOT_DIR, "package.json");
 
 /**
@@ -48,7 +47,7 @@ function rewriteUrl(url) {
 		return url;
 	}
 	if (url.startsWith("./dist/")) {
-		return url.replace("./dist/", "./schemas/dist/");
+		return url.replace("./dist/", "rockide-schema:///");
 	}
 	return url;
 }
@@ -70,55 +69,22 @@ async function main() {
 	}
 	const data = Buffer.from(await res.arrayBuffer());
 	const entries = await unpackTar(gunzipSync(data));
-
-	/**
-	 * @type Package
-	 */
-	let schemasPkg;
-	/**
-	 * @type {Array<{name: string, data: Uint8Array}>}
-	 */
-	const distEntries = [];
-	for (const entry of entries) {
-		if (!entry.data || entry.header.name.endsWith("/")) {
-			continue;
-		}
-		// Normalize tar entry to prevent path traversal.
-		const name = posix.normalize(entry.header.name).replace(/^(\.\/)+/, "");
-		if (name.startsWith("..") || name === "") {
-			continue;
-		}
-		if (name === "package.json") {
-			schemasPkg = JSON.parse(Buffer.from(entry.data).toString("utf8"));
-			continue;
-		}
-		if (!name.startsWith("dist/")) {
-			continue;
-		}
-		distEntries.push({ name, data: entry.data });
-	}
-	if (!schemasPkg) {
+	const pkgEntry = entries.find((e) => e.data && e.header.name === "package.json");
+	if (!pkgEntry) {
 		throw new Error(
 			`Release ${release.tag_name} asset is missing package.json.`,
 		);
 	}
+	/**
+	 * @type Package
+	 */
+	const schemasPkg = JSON.parse(Buffer.from(pkgEntry.data).toString("utf8"));
 	const validations = schemasPkg.contributes?.jsonValidation;
 	if (!Array.isArray(validations)) {
 		throw new Error(
 			`Release ${release.tag_name} has no contributes.jsonValidation.`,
 		);
 	}
-
-	await rm(OUT_DIR, { recursive: true, force: true });
-	await mkdir(join(OUT_DIR, "dist"), { recursive: true });
-	for (const { name, data: content } of distEntries) {
-		const outPath = join(OUT_DIR, name);
-		await mkdir(dirname(outPath), { recursive: true });
-		await writeFile(outPath, content);
-	}
-	console.log(
-		`Extracted ${distEntries.length} schema files to ./schemas/dist/`,
-	);
 
 	/**
 	 * @type {Array<{url: string}>}

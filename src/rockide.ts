@@ -7,9 +7,7 @@ import which from "which";
 import { GitHubRelease, downloadAsset, getLatestRelease } from "./github";
 import { startClient, stopClient } from "./lsp";
 import { platform } from "./platform";
-import { execFileAsync, exists, gunzipAsync } from "./utils";
-
-const UPDATE_CHECK_INTERVAL = 12 * 60 * 60 * 1000; // 12 hours
+import { UPDATE_CHECK_INTERVAL, execFileAsync, exists, gunzipAsync } from "./utils";
 
 async function getCustomRockidePath() {
 	const config = vscode.workspace.getConfiguration("rockide");
@@ -34,11 +32,11 @@ async function getCustomRockidePath() {
 	throw new Error(`Invalid Rockide path: ${path}`);
 }
 
-export function getDefaultRockidePath(ctx: vscode.ExtensionContext) {
+function getDefaultRockidePath(ctx: vscode.ExtensionContext) {
 	return vscode.Uri.joinPath(ctx.globalStorageUri, platform.exe);
 }
 
-export async function getInstalledRockideExe(ctx: vscode.ExtensionContext) {
+async function getInstalledRockideExe(ctx: vscode.ExtensionContext) {
 	const path = await getCustomRockidePath();
 	if (path) {
 		return path;
@@ -57,7 +55,7 @@ export async function getInstalledRockideExe(ctx: vscode.ExtensionContext) {
 	return null;
 }
 
-export async function promptInstallRockide(dest: vscode.Uri) {
+async function promptInstallRockide(dest: vscode.Uri) {
 	const res = await vscode.window.showInformationMessage(
 		"Rockide language server is not installed. Do you want to install it now?",
 		"Yes",
@@ -69,8 +67,8 @@ export async function promptInstallRockide(dest: vscode.Uri) {
 	await installRockide(dest);
 }
 
-export async function installRockide(dest: vscode.Uri, release?: GitHubRelease) {
-	release ??= await getLatestRelease();
+async function installRockide(dest: vscode.Uri, release?: GitHubRelease) {
+	release ??= await getLatestRelease("rockide/language-server");
 	const target = `rockide_${release.tag_name}_${platform.os}_${platform.arch}.tar.gz`;
 	const asset = release.assets.find((v) => v.name === target);
 	if (!asset) {
@@ -122,7 +120,7 @@ export async function updateRockide(ctx: vscode.ExtensionContext, silent?: boole
 		return;
 	}
 
-	const release = await getLatestRelease();
+	const release = await getLatestRelease("rockide/language-server");
 	if (semver.eq(release.tag_name, currentVersion)) {
 		if (!silent) {
 			vscode.window.showInformationMessage("Rockide is already up to date.");
@@ -142,4 +140,29 @@ export async function updateRockide(ctx: vscode.ExtensionContext, silent?: boole
 	await stopClient();
 	await installRockide(rockideExe, release);
 	await startClient(rockideExe);
+}
+
+export async function startRockide(ctx: vscode.ExtensionContext) {
+	let rockideExe = await getInstalledRockideExe(ctx);
+	if (!rockideExe) {
+		rockideExe = getDefaultRockidePath(ctx);
+		await promptInstallRockide(rockideExe);
+	}
+
+	ctx.subscriptions.push(
+		vscode.workspace.onDidChangeConfiguration(async (event) => {
+			if (event.affectsConfiguration("rockide.projectPaths")) {
+				vscode.window.withProgress({
+					location: vscode.ProgressLocation.Notification,
+					title: "Project configuration changed. Restarting language server...",
+				}, async () => {
+					await stopClient();
+					await startClient(rockideExe);
+				});
+			}
+		}),
+	);
+
+	await startClient(rockideExe);
+	await updateRockide(ctx, true);
 }

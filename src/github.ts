@@ -1,7 +1,6 @@
 import { createHash } from "crypto";
 import * as vscode from "vscode";
-
-const GITHUB_API_URL = "https://api.github.com/repos/rockide/language-server/releases";
+import { req } from "./utils";
 
 export type GitHubRelease = {
 	tag_name: string;
@@ -14,20 +13,17 @@ export type GitHubAsset = {
 	browser_download_url: string;
 };
 
-export async function getLatestRelease() {
-	const res = await fetch(`${GITHUB_API_URL}/latest`);
-	if (!res.ok) {
-		throw new Error(`Failed to fetch latest version: ${res.statusText} (${res.status})`);
-	}
+export async function getLatestRelease(repo: string) {
+	const res = await req(`https://api.github.com/repos/${repo}/releases/latest`);
 	return await res.json() as GitHubRelease;
 }
 
-export function downloadAsset(asset: GitHubAsset) {
+export function downloadAsset(asset: GitHubAsset, silent?: boolean) {
 	return vscode.window.withProgress(
 		{
-			location: vscode.ProgressLocation.Notification,
+			location: silent ? vscode.ProgressLocation.Window : vscode.ProgressLocation.Notification,
 			title: `Downloading ${asset.name}`,
-			cancellable: true,
+			cancellable: !silent,
 		},
 		async (progress, token) => {
 			const abortController = new AbortController();
@@ -35,12 +31,9 @@ export function downloadAsset(asset: GitHubAsset) {
 				abortController.abort();
 			});
 
-			let res = await fetch(asset.browser_download_url, {
+			let res = await req(asset.browser_download_url, {
 				signal: abortController.signal,
 			});
-			if (!res.ok) {
-				throw new Error(`${res.statusText} (${res.status})`);
-			}
 			if (!res.body) {
 				throw new Error("Failed to get response body.");
 			}
